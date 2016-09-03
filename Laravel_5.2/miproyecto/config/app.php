@@ -25,8 +25,8 @@ return [
     | application. If disabled, a simple generic error page is shown.
     |
     */
-
-    'debug' => env('APP_DEBUG', false),
+		// ACTIVAR MODO DEPURADOR - en produccion debe desactivarse
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +38,7 @@ return [
     | your application so that it is used when running Artisan tasks.
     |
     */
-
+		// RUTA POR DEFAULT
     'url' => env('APP_URL', 'http://localhost'),
 
     /*
@@ -51,8 +51,8 @@ return [
     | ahead and set this to a sensible default for you out of the box.
     |
     */
-
-    'timezone' => 'UTC',
+		// zona horaria http://php.net/manual/es/timezones.america.php
+    'timezone' => 'America/Mexico_City',
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ return [
     | to any of the locales which will be supported by the application.
     |
     */
-
+		// copiar carpeta 'es' del zip y pegar a C:\xampp\htdocs\phpalextremo\Laravel_5.2\miproyecto\resources\lang\es
     'locale' => 'en',
 
     /*
@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Market\Providers\AppServiceProvider::class,
+        Market\Providers\AuthServiceProvider::class,
+        Market\Providers\EventServiceProvider::class,
+        Market\Providers\RouteServiceProvider::class,
 
     ],
 
